@@ -33,6 +33,11 @@ class ViewController: UIViewController {
         if let fNumber = firstNumberTextField.text, let sNumber = secondNumberTextField.text {
             if let firstNumber = Int(fNumber), let secondNumber = Int(sNumber) {
                 let result = firstNumber - secondNumber
+                answerLabel.text = "\(result)"
+            }
+        }
+    }
+    
     @IBAction func whenMultiplyButtonPressed(_ sender: UIButton) {
         if let fNumber = firstNumberTextField.text, let sNumber = secondNumberTextField.text {
             if let firstNumber = Int(fNumber), let secondNumber = Int(sNumber) {
