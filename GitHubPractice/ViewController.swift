@@ -20,9 +20,22 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func whenAddButtonPressed(_ sender: UIButton) {
-        
+   @IBAction func whenAddButtonPressed(_ sender: UIButton) {
+       if let fNumber = firstNumberTextField.text, let sNumber = secondNumberTextField.text {
+           if let firstNumber = Int(fNumber), let secondNumber = Int(sNumber) {
+               let result = firstNumber + secondNumber
+               answerLabel.text = "\(result)"
+           }
+       }
     }
     
+    @IBAction func whenSubtarctButtonPressed(_ sender: Any) {
+        if let fNumber = firstNumberTextField.text, let sNumber = secondNumberTextField.text {
+            if let firstNumber = Int(fNumber), let secondNumber = Int(sNumber) {
+                let result = firstNumber - secondNumber
+                answerLabel.text = "\(result)"
+            }
+        }
+    }
 }
 
