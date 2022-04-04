@@ -37,6 +37,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title=" -">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="whenSubtarctButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lVV-wc-wbV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEQ-3e-u2X">
                                 <rect key="frame" x="211" y="394" width="67" height="31"/>
