@@ -11,27 +11,28 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var firstNumberTextField: UITextField!
     @IBOutlet weak var secondNumberTextField: UITextField!
-    @IBOutlet weak var operationLabel: UITextField!
-    @IBOutlet weak var answerLabel: UITextField!
-
+    @IBOutlet weak var operationLabel: UILabel!
+    @IBOutlet weak var answerLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
-   @IBAction func whenAddButtonPressed(_ sender: UIButton) {
-       if let fNumber = firstNumberTextField.text, let sNumber = secondNumberTextField.text {
-           if let firstNumber = Int(fNumber), let secondNumber = Int(sNumber) {
+    @IBAction func whenAddButtonPressed(_ sender: UIButton) {
+        if let fNumber = firstNumberTextField.text, let sNumber = secondNumberTextField.text {
+            if let firstNumber = Int(fNumber), let secondNumber = Int(sNumber) {
+               operationLabel.text = "+"
                let result = firstNumber + secondNumber
                answerLabel.text = "\(result)"
-           }
-       }
+            }
+        }
     }
     
     @IBAction func whenSubtarctButtonPressed(_ sender: Any) {
         if let fNumber = firstNumberTextField.text, let sNumber = secondNumberTextField.text {
             if let firstNumber = Int(fNumber), let secondNumber = Int(sNumber) {
+                operationLabel.text = "-"
                 let result = firstNumber - secondNumber
                 answerLabel.text = "\(result)"
             }
@@ -41,6 +42,7 @@ class ViewController: UIViewController {
     @IBAction func whenMultiplyButtonPressed(_ sender: UIButton) {
         if let fNumber = firstNumberTextField.text, let sNumber = secondNumberTextField.text {
             if let firstNumber = Int(fNumber), let secondNumber = Int(sNumber) {
+                operationLabel.text = "*"
                 let result = firstNumber * secondNumber
                 answerLabel.text = "\(result)"
             }
@@ -50,6 +52,7 @@ class ViewController: UIViewController {
     @IBAction func whenDivideButtonPressed(_ sender: UIButton) {
         if let fNumber = firstNumberTextField.text, let sNumber = secondNumberTextField.text {
             if let firstNumber = Int(fNumber), let secondNumber = Int(sNumber) {
+                operationLabel.text = "/"
                 let result = firstNumber / secondNumber
                 answerLabel.text = "\(result)"
             }
